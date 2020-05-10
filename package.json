@@ -1,0 +1,37 @@
+{
+  "name": "webpack-starter",
+  "version": "1.0.0",
+  "description": "A lightweight starter project for your next webpack based frontend project.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rimraf dist && webpack --mode production",
+    "dev": "webpack-dev-server",
+    "deploy": "npm run build && git add dist && git commit -m 'deploy' && git subtree push --prefix dist origin gh-pages"
+  },
+  "keywords": [],
+  "author": "Álvaro González",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "node-sass": "^4.13.1",
+    "rimraf": "^2.7.1",
+    "sass-loader": "^8.0.2",
+    "standard": "^14.3.3",
+    "style-loader": "^1.1.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  },
+  "eslintConfig": {
+    "extends": [
+      "standard"
+    ]
+  }
+}
